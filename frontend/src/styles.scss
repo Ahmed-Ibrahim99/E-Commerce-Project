@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+a {
+  text-decoration: none;
+}
+
+.p-menubar {
+  background-color: #f6f6f6 !important;
+}
+
+/* Change the background color of the active page button */
+.pagination .page-item.active .page-link {
+  background-color: #cf1a29;
+  border-color: #cf1a29;
+}
+
+/* Change the text color of the page buttons */
+.pagination .page-link {
+  color: #cf1a29;
+  background-color: white;
+  font-size: 18px;
+  padding: 0.5rem 1rem;
+}
+
+.pagination .page-link:hover{
+  color: #cf1a29 !important;
+}
+.pagination .page-item.active .page-link {
+  color: white;
+}
+
+.pagination .page-item.active .page-link:hover{
+  color:white !important;
+}
+
+.p-inputtext:enabled:hover {
+  border-color: #797979 !important;
+}
+
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: #febfbf !important;
+  border-color: transparent !important;
+}
+
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #ffbfbf !important;;
+}

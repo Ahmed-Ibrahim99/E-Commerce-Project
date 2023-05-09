@@ -1,0 +1,43 @@
+<main class="m-auto">
+  <section>
+    <div class="bread-crumb m-auto">
+      <div class="py-4">
+        <a href="" class="font-bold" style="color:#252a31">Shop</a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="product-info m-auto">
+      <div class="flex justify-content-between">
+        <div class="image-container">
+          <img [src]="product.imageUrl" [alt]="product.name">
+        </div>
+        <div>
+          <h1 class="mb-3 text-4xl">{{product.name}}</h1>
+          <p>SKU: {{product.sku}}</p>
+          <div class="mb-4">
+            <span class="font-bold text-2xl text-danger">EGP {{product.price}}</span>
+          </div>
+          <div class="flex justify-content-between">
+            <button class="add-to-cart w-15rem" (click)="addToCart()">
+              <span class="px-1">Add to cart</span>
+              <div class="pi pi-cart-plus px-1" style="color: white; font-size: 1rem; font-weight: bold"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pt-5 pb-5">
+    <div >
+      <div class="flex justify-content-between border-200 border-bottom-1 ">
+        <div class="border-bottom-1 border-red-300">
+          <h2 class="font-bold text-2xl">Description</h2>
+        </div>
+      </div>
+      <div class="p-3">
+        {{product.description}}
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,43 @@
+<main>
+  <section>
+    <div class="product-section m-auto">
+      <div>
+        <div class="flex justify-content-between border-200 border-bottom-1 pt-5">
+          <div class="border-bottom-1 border-red-300">
+            <h2 class="font-bold text-2xl">Products</h2>
+          </div>
+          <ng-container *ngIf="this._route.snapshot.paramMap.has('id')">
+            <a routerLink="/products" style="color:#cf1a29;" class="font-bold">
+              <span>See all</span>
+              <span class="pi pi-arrow-right pl-2"></span>
+            </a>
+          </ng-container>
+        </div>
+        <div class="pt-4 flex">
+          <div class="product-card p-4" *ngFor="let product of _products">
+            <a [routerLink]="['/product',product.id]">
+              <p class="mb-3" style="color:#323232">{{product.name}}</p>
+              <div class="relative">
+                <img [src]="product.imageUrl" [alt]="product.name">
+              </div>
+              <div class="mt-2 mb-4">
+                <span class="text-lg font-bold text-danger">EGP {{product.price}}</span>
+              </div>
+            </a>
+            <button class="add-to-cart" (click)="addToCart(product)">
+              <span class="px-1">Add to cart</span>
+              <div class="pi pi-cart-plus px-1 text-danger" style="font-size: 1rem; font-weight: bold"></div>
+            </button>
+          </div>
+        </div>
+        <div class="pagination-section pt-4 flex justify-content-center">
+          <ngb-pagination [(page)]="pageNumber"
+                          [pageSize]="pageSize"
+                          [collectionSize]="totalElements"
+                          (pageChange)="listProducts()"></ngb-pagination>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+

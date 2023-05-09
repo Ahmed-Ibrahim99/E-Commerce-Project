@@ -1,0 +1,62 @@
+<main>
+
+  <div class="py-5">
+
+    <div class="sign-up-card m-auto m-0 flex justify-content-center">
+
+      <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+
+        <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+
+          <div class="text-center mb-4">
+            <div class="text-900 text-3xl font-medium mb-3">Create an account</div>
+            <span class="text-600 font-medium line-height-3">
+              Welcome to The TECH STORE | All Your Tech Needs. Store!
+              <br>
+              Please fill out the form to become a member.
+            </span>
+          </div>
+
+          <div formGroupName="user">
+            <label for="email1" class="block text-900 font-medium mb-2">Email</label>
+            <input formControlName="email" id="email1" type="text" pInputText class="w-full mb-3">
+
+            <label for="password1" class="block text-900 font-medium mb-2">Password</label>
+            <input formControlName="password" id="password1" type="password" pInputText class="w-full mb-3">
+
+
+            <button pButton pRipple label="Create Account" icon="pi pi-user" class="w-full bg-danger mt-6"
+                    type="submit"></button>
+            <br>
+            <br>
+            <div class="flex align-items-center justify-content-between mb-6 mt-4">
+              <div class="flex align-items-center">
+                <p-avatar icon="pi pi-info-circle" styleClass="mr-2"
+                          [style]="{'background-color': '#f5d1d0', 'color': '#cf1a29'}" shape="circle"></p-avatar>
+                <span>By creating an account you agree to our <a class="font-bold" style="color:#cf1a29">Terms & Conditions</a>
+                  &
+                  <a class="font-bold" style="color:#cf1a29">Privacy Policy</a>
+                  </span>
+              </div>
+            </div>
+            <hr>
+            <div class="flex justify-content-center">
+              <div class="justify-content-center">
+                <p class="mb-0">Already have an account?</p>
+                <a routerLink="/sign-in" class="font-bold pl-2" style="color:#cf1a29">Login to your account</a>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+

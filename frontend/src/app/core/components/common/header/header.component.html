@@ -1,0 +1,70 @@
+<header>
+  <!--Topbar Start-->
+  <div class="bg-black-alpha-80 text-200 p-3 ">
+    <section>
+      <div class="topbar-section m-auto">
+        <div class="justify-content-between align-items-center flex">
+          <p class="m-0">SUN-THU 10 AM to 6 PM</p>
+          <br>
+          <div class="flex">
+            <div class="contact-us px-3">
+              <div class="pi pi-phone mx-2"></div>
+              <a href="" class="text-200">Contact us</a>
+            </div>
+            <span class="px-3" *ngIf="!isAuthenticated()">
+              <a routerLink="sign-in">
+                <span class="pi pi-user mx-2" style="color:white"></span>
+                <span class="text-200 align-items-center">Login</span>
+              </a>
+            </span>
+            <span class="px-3 cursor-pointer" *ngIf="isAuthenticated()" (click)="logOut()">
+              <a>
+                <span class="pi pi-user mx-2" style="color:white"></span>
+                <span class="text-200 align-items-center">Logout</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Topbar End-->
+
+  <!--  Navbar Start-->
+  <section>
+    <div class="navbar-section m-auto">
+      <div class="">
+        <div class="py-4 flex justify-content-between align-items-center">
+          <div class="flex">
+            <span class="mr-3 flex">
+              <div class="col-lg-4 justify-content-center">
+            <a routerLink="products" class="text-decoration-none">
+              <span class="h1 text-uppercase bg-dark px-2 text-danger">Tech</span>
+              <span class="h1 text-uppercase text-dark  px-2 ml-n1 bg-danger">Shop</span>
+            </a>
+          </div>
+            </span>
+            <div class="p-input-icon-right flex">
+              <i class="pi pi-search justify-content-center"></i>
+              <input #myInput type="text" class="p-inputtext-sm w-20rem" placeholder="What are you looking for?" pInputText
+                     (input)="doSearch(myInput.value)"/>
+            </div>
+          </div>
+          <div class="align-items-center">
+            <app-cart-status></app-cart-status>
+          </div>
+        </div>
+      </div>
+      <p-menubar [model]="items">
+        <div>
+          <div class="pi pi-facebook mr-4" style="font-size: 1rem; color:#212529;"></div>
+          <div class="pi pi-instagram mr-4" style="font-size: 1rem; color:#212529;"></div>
+          <div class="pi pi-whatsapp mr-4" style="font-size: 1rem; color:#212529;"></div>
+          <div class="pi pi-telegram mr-4" style="font-size: 1rem; color:#212529;"></div>
+        </div>
+      </p-menubar>
+    </div>
+  </section>
+  <!--  Navbar End-->
+</header>
+
