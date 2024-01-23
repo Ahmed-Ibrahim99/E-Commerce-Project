@@ -1,35 +1,3 @@
-INSERT INTO country(id, code, name)
-VALUES (1, 'EGY', 'EGYPT');
-
-INSERT INTO state (id, name, country_id)
-VALUES (1, 'Alexandria', 1),
-       (2, 'Aswan', 1),
-       (3, 'Asyut', 1),
-       (4, 'Beheira', 1),
-       (5, 'Beni Suef', 1),
-       (6, 'Cairo', 1),
-       (7, 'Dakahlia', 1),
-       (8, 'Damietta', 1),
-       (9, 'Faiyum', 1),
-       (10, 'Gharbia', 1),
-       (11, 'Giza', 1),
-       (12, 'Ismailia', 1),
-       (13, 'Kafr El Sheikh', 1),
-       (14, 'Luxor', 1),
-       (15, 'Matrouh', 1),
-       (16, 'Minya', 1),
-       (17, 'Monufia', 1),
-       (18, 'New Valley', 1),
-       (19, 'North Sinai', 1),
-       (20, 'Port Said', 1),
-       (21, 'Qalyubia', 1),
-       (22, 'Qena', 1),
-       (23, 'Red Sea', 1),
-       (24, 'Sharqia', 1),
-       (25, 'Sohag', 1),
-       (26, 'South Sinai', 1),
-       (27, 'Suez', 1);
-
 INSERT INTO product_category(id, category_name)
 VALUES (1, 'MOBILES'),
        (2, 'GAMING'),
@@ -40,11 +8,9 @@ VALUES (1, 'MOBILES'),
        (7, 'TABLETS'),
        (8, 'WEARABLES');
 
-
 INSERT INTO roles (id, role_name)
 VALUES (1, 'USER_ROLE'),
        (2, 'ADMIN_ROLE');
-
 
 INSERT INTO product (id, date_created, product_description, image_url, product_name, product_price, category_id, sku)
 VALUES (1, now(), 'This is Apple Watch Series 8', 'assets/images/Wearables/Apple-watch-series-8',
@@ -98,5 +64,36 @@ VALUES (9, now(), 'Description The iPad Pro 12.9-inch (2022) comes with 12.9-inc
         CONCAT(LEFT('iPad Pro 12.9-inch', 3), '-', LEFT((SELECT category_name FROM product_category WHERE id = 9), 2), '-', 9));
 
 
+INSERT INTO country(id, code, name)
+VALUES (1, 'EGY', 'EGYPT');
+
+INSERT INTO state (id, name, country_id)
+VALUES (1, 'Alexandria', 1),
+       (2, 'Aswan', 1),
+       (3, 'Asyut', 1),
+       (4, 'Beheira', 1),
+       (5, 'Beni Suef', 1),
+       (6, 'Cairo', 1),
+       (7, 'Dakahlia', 1),
+       (8, 'Damietta', 1),
+       (9, 'Faiyum', 1),
+       (10, 'Gharbia', 1),
+       (11, 'Giza', 1),
+       (12, 'Ismailia', 1),
+       (13, 'Kafr El Sheikh', 1),
+       (14, 'Luxor', 1),
+       (15, 'Matrouh', 1),
+       (16, 'Minya', 1),
+       (17, 'Monufia', 1),
+       (18, 'New Valley', 1),
+       (19, 'North Sinai', 1),
+       (20, 'Port Said', 1),
+       (21, 'Qalyubia', 1),
+       (22, 'Qena', 1),
+       (23, 'Red Sea', 1),
+       (24, 'Sharqia', 1),
+       (25, 'Sohag', 1),
+       (26, 'South Sinai', 1),
+       (27, 'Suez', 1);
 
 
