@@ -36,17 +36,19 @@ To get started with this project, you'll need to clone the repository to your lo
 
 1. Clone the repository to your local machine: `git clone https://github.com/your-username/e-commerce-project.git`
 
-2. Import the database schema from the `database.sql` file located in the root directory of the project into your PostgreSQL instance.
+2. Open a terminal and navigate to the project's root directory.
 
-3. Open a terminal and navigate to the project's root directory.
+3. Run the following command to start the backend server using Docker Compose: `docker-compose up`
 
-4. Run the following command to start the backend server using Docker Compose: `docker-compose up`
+4. Open another terminal and navigate to the frontend directory of the project.
 
-5. Open another terminal and navigate to the frontend directory of the project.
+5. Run the following command to install the frontend dependencies: `npm install`
 
-6. Run the following command to install the frontend dependencies: `npm install`
+6. Run the following command to start the frontend server: `ng serve`
 
-7. Run the following command to start the frontend server: `ng serve`
+7. Once the backend and frontend servers are running, the database schema and initial data will be automatically loaded from the `data.sql` file during the startup process.
+
+8. You can access the e-commerce application by opening a web browser and navigating to http://localhost:4200. This will show you the list of available tech products. If you want to order a product, you will need to log in.
 
 ### Usage
 
